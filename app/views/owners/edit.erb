@@ -10,9 +10,9 @@
   <input type="text" name="pet[name]" id="pet_name"></input>
   
   <label>Your Pets</label>
-    <% @pets.each do |pet| %>
-      <input type="checkbox" name="owner[pet_ids][]" id="<%= pet.id %>" value="<%= pet.id %>" <%='checked' if @owner.pets.include?(pet) %>><%= pet.name %></input><br>
-    <% end %>
+  <% @pets.each do |pet| %>
+    <input type="checkbox" name="owner[pet_ids][]" id="<%= pet.id %>" value="<%= pet.id %>" <%='checked' if @owner.pets.include?(pet) %>><%= pet.name %></input><br>
+  <% end %>
     
   <input type="submit" value="Update Owner">
 </form>
