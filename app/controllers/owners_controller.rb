@@ -11,7 +11,7 @@ class OwnersController < ApplicationController
   end
 
   post '/owners' do 
-    
+    @owner = Owner.create
   end
 
   get '/owners/:id/edit' do 
