@@ -16,8 +16,8 @@ class OwnersController < ApplicationController
       #/redirect '/failure'
     else
       @owner.pets << Pet.create(name: params["pet"]["name"])
-      redirect "/owners/#{@owner.id}"
     end
+    redirect "/owners/#{@owner.id}"
   end
 
   get '/owners/:id/edit' do 
